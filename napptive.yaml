@@ -18,6 +18,6 @@ spec:
       - type: napptive-ingress # Set to napptive-ingress      
         properties:
           name: nginx-ingress # (Optional) endpoint name 
-          port: 80 # (Required) port  where the service is listening for incomming connections.
+          port: 5000 # (Required) port  where the service is listening for incomming connections.
           path: / # (Required) path to be exposed
          
