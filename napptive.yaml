@@ -1,0 +1,23 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  name: my-app
+  annotations:
+    version: "v0.0.1"
+    description: "My apply-application application"
+spec:
+  components:
+    - name: component
+      type: webservice
+      properties:
+        image: irshit033/sample_go_project:1.0.0
+        ports:
+        - port: 5000
+          expose: true
+      traits:
+      - type: napptive-ingress # Set to napptive-ingress      
+        properties:
+          name: nginx-ingress # (Optional) endpoint name 
+          port: 80 # (Required) port  where the service is listening for incomming connections.
+          path: / # (Required) path to be exposed
+         
